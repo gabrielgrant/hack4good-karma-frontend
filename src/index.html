@@ -16,10 +16,65 @@
 
   <script type="text/x-handlebars" data-template-name="index">
     <ul>
+      <li>
+        For Volunteers:
+        <ul>
+          <li>
+            {{#link-to 'opportunities.index'}}
+              View Opportunities
+            {{/link-to}}
+          </li>
+          <li>
+            {{#link-to 'volunteers.signup'}}
+              Signup to Volunteer
+            {{/link-to}}
+          </li>
+        </ul>
+      </li>
+      <li>
+        For Organizations:
+        <ul>
+          <li>
+            {{#link-to 'volunteers.index'}}
+              View Volunteers
+            {{/link-to}}
+          </li>
+          <li>
+            {{#link-to 'opportunities.new'}}
+              New Opportunity
+            {{/link-to}}
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </script>
+
+  <script type="text/x-handlebars" data-template-name="opportunities/index">
+    <h3>Opportunity List</h3>
+    <ul>
     {{#each item in model}}
       <li>{{item}}</li>
     {{/each}}
     </ul>
+  </script>
+
+  <script type="text/x-handlebars" data-template-name="opportunities/new">
+    <h3>Submit a New Opportunity</h3>
+    <p>opportunity form</p>
+  </script>
+
+  <script type="text/x-handlebars" data-template-name="volunteers/index">
+    <h3>Volunteer List</h3>
+    <ul>
+    {{#each item in model}}
+      <li>{{item}}</li>
+    {{/each}}
+    </ul>
+  </script>
+
+  <script type="text/x-handlebars" data-template-name="volunteers/signup">
+    <h3>Volunteer Signup</h3>
+    <p>signup form</p>
   </script>
 
   <script src="js/libs/jquery-1.9.1.js"></script>

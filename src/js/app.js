@@ -1,7 +1,12 @@
 App = Ember.Application.create();
 
 App.Router.map(function() {
-  // put your routes here
+  this.resource('opportunities', function() {
+    this.route('new');
+  });
+  this.resource('volunteers', function() {
+    this.route('signup');
+  });
 });
 
 App.IndexRoute = Ember.Route.extend({
