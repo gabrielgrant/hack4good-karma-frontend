@@ -9,8 +9,27 @@ App.Router.map(function() {
   });
 });
 
-App.IndexRoute = Ember.Route.extend({
+
+App.OpportunitiesIndexRoute = Ember.Route.extend({
   model: function() {
-    return ['red', 'yellow', 'blue'];
+    return this.store.find('opportunity');
   }
 });
+
+App.OpportunitiesNewRoute = Ember.Route.extend({
+  model: function() {
+    return this.store.createRecord('opportunity');
+  }
+});
+
+App.VolunteersIndexRoute = Ember.Route.extend({
+  model: function() {
+    return this.store.find('volunteer');
+  }
+});
+App.VolunteersSignupRoute = Ember.Route.extend({
+  model: function() {
+    return this.store.createRecord('volunteer');
+  }
+});
+
