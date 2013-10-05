@@ -11,6 +11,36 @@
   <script type="text/x-handlebars">
     <h2>Welcome to Karma</h2>
 
+    <nav>
+      <ul>
+        <li>
+          {{#link-to 'index'}}
+            Home
+          {{/link-to}}
+        </li>
+        <li>
+          {{#link-to 'opportunities.index'}}
+            View Opportunities
+          {{/link-to}}
+        </li>
+        <li>
+          {{#link-to 'volunteers.signup'}}
+            Signup to Volunteer
+          {{/link-to}}
+        </li>
+        <li>
+          {{#link-to 'volunteers.index'}}
+            View Volunteers
+          {{/link-to}}
+        </li>
+        <li>
+          {{#link-to 'opportunities.new'}}
+            New Opportunity
+          {{/link-to}}
+        </li>
+      </ul>
+    </nav>
+
     {{outlet}}
   </script>
 
