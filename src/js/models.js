@@ -2,6 +2,11 @@ var attr = DS.attr
 var hasMany = DS.hasMany
 
 App.ApplicationAdapter = DS.FixtureAdapter
+/*
+App.ApplicationAdapter = DS.RESTAdapter.extend({
+  namespace: '/api/v1'
+});
+*/
 
 App.Volunteer = DS.Model.extend({
   name: attr('string'),
